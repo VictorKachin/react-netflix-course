@@ -14,6 +14,3 @@ function App() {
 }
 
 export default App
-
-// https://www.youtube.com/watch?v=UC2vnwCY4T4
-// 20:00
