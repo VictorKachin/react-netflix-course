@@ -1,4 +1,4 @@
-import { FavoriteButton } from './assets/FavoriteButton'
+import { FavoriteButton } from './FavoriteButton'
 
 export function MovieCard({ image, rating }) {
 	return (

@@ -9,5 +9,3 @@ export function FavoriteButton() {
 		</button>
 	)
 }
-// https://www.youtube.com/watch?v=UC2vnwCY4T4
-// 22:31
