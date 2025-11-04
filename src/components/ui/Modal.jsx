@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 export function Modal({ children, onClose }) {
-  useEffect(() =>{
-      
-  }, [])
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
 
   return createPortal(
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center">
@@ -15,10 +22,7 @@ export function Modal({ children, onClose }) {
         >
           x
         </button>
-          <div className="flex justify-center items-center ">
-              {children}
-          </div>
-
+        <div className="flex justify-center items-center">{children}</div>
       </div>
     </div>,
     document.body,

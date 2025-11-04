@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { useDebounce } from "./hooks/useDebounce"
-import { useTheme } from "./hooks/useTheme.js"
-import { MovieCard } from "./MovieCard"
-import { MOVIES } from "./movies.data"
+import { useState } from "react";
+import { useDebounce } from "./hooks/useDebounce";
+import { useTheme } from "./hooks/useTheme.js";
+import { MovieCard } from "./MovieCard";
+import { MOVIES } from "./movies.data";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -58,4 +58,4 @@ function App() {
 export default App;
 
 // https://www.youtube.com/watch?v=UC2vnwCY4T4
-// 44:55
+// 55:01
