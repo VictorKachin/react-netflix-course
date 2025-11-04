@@ -42,6 +42,7 @@ function App() {
               key={movie.name}
               image={movie.image}
               rating={movie.rating}
+              trailerYoutubeID={movie.trailerYoutubeID}
             />
             // or
             // <MovieCard {...movie} />
