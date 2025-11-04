@@ -6,7 +6,6 @@ import { useTheme } from "./hooks/useTheme.js";
 
 function App() {
 	const {theme, toggleTheme} = useTheme()
-	
 	const [searchTerm, setSearchTerm] = useState('')
 	const debouncedSearch = useDebounce(searchTerm, 500)
 	const movies = MOVIES.filter(movie =>
