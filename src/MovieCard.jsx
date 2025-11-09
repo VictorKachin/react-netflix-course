@@ -1,13 +1,12 @@
-import { FavoriteButton } from "./FavoriteButton";
-import { useState } from "react";
-import { Modal } from "./components/ui/Modal.jsx";
+import { useState } from "react"
+import { Modal } from "./components/ui/Modal.jsx"
+import { FavoriteButton } from "./FavoriteButton"
 
 export function MovieCard({ image, rating }) {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
   return (
     <button
-      className="relative w-[200px] rounded-2xl overflow-hidden
-    bg-neutral-900 shadow-lg"
+      className="relative w-[200px] rounded-2xl overflow-hidden bg-neutral-900 shadow-lg"
       onClick={() => {
         setIsOpenTrailer(true);
       }}
@@ -26,9 +25,7 @@ export function MovieCard({ image, rating }) {
             }
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer;
-              autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-              web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           />
