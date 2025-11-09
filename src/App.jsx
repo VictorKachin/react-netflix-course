@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { useDebounce } from "./hooks/useDebounce"
-import { useTheme } from "./hooks/useTheme.js"
-import { MovieCard } from "./MovieCard"
-import { MOVIES } from "./movies.data"
+import {useState} from "react";
+import {useDebounce} from "./hooks/useDebounce";
+import {useTheme} from "./hooks/useTheme.js";
+import {MovieCard} from "./MovieCard";
+import {MOVIES} from "./movies.data";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +12,9 @@ function App() {
     movie.name.toLowerCase().includes(debouncedSearch.toLowerCase()),
   );
   return (
-    <div className="min-h-screen w-full bg-white dark:bg-black text-black  dark:text-white px-6 py-5">
+      <div
+          className="min-h-screen w-full bg-white dark:bg-black text-black dark:text-white px-6 py-5"
+      >
       <header className="mb-10 flex items-center justify-between">
         <img src="/public/netflix.png" alt="Netflix" className="h-8 w-auto" />
 
@@ -41,8 +43,7 @@ function App() {
             <MovieCard
               key={movie.name}
               image={movie.image}
-              rating={movie.rating}
-              trailerYoutubeID={movie.trailerYoutubeID}
+                rating={movie.rating} trailerYoutubeId={movie.trailerYoutubeId}
             />
             // or
             // <MovieCard {...movie} />

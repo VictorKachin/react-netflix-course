@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 
 export function FavoriteButton() {
 	const [isFavorite, setIsFavorite] = useState(false)
@@ -6,7 +6,7 @@ export function FavoriteButton() {
 		console.log('Состояние изменилось!')
 	}, [isFavorite])
 	return (
-		<button onClick={() => setIsFavorite(!isFavorite)}>
+        <button className="btn" onClick={() => setIsFavorite(!isFavorite)}>
 			{isFavorite ? '❤️' : '🤍'}
 		</button>
 	)
