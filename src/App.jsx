@@ -3,14 +3,19 @@ import { useDebounce } from "./hooks/useDebounce";
 import { useTheme } from "./hooks/useTheme.js";
 import MovieCard from "./MovieCard";
 import { MOVIES } from "./movies.data";
+import { useMemo } from "react";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
   const [searchTerm, setSearchTerm] = useState("");
   const debouncedSearch = useDebounce(searchTerm, 500);
-  const movies = MOVIES.filter((movie) =>
-    movie.name.toLowerCase().includes(debouncedSearch.toLowerCase()),
-  );
+  const movies = useMemo(() => {
+    console.log("movies changed");
+    return MOVIES.filter((movie) =>
+      movie.name.toLowerCase().includes(debouncedSearch.toLowerCase()),
+    );
+  }, [debouncedSearch]);
+
   return (
     <div className="min-h-screen w-full bg-white dark:bg-black text-black dark:text-white px-6 py-5">
       <header className="mb-10 flex items-center justify-between">
@@ -58,4 +63,4 @@ function App() {
 export default App;
 
 // https://www.youtube.com/watch?v=UC2vnwCY4T4
-// 57:01
+// 1:04:40
