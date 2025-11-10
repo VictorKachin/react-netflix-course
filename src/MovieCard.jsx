@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Modal } from "./components/ui/Modal.jsx";
-import { FavoriteButton } from "./FavoriteButton";
+import FavoriteButton from "./FavoriteButton";
 
-export function MovieCard({ image, rating, trailerYoutubeId }) {
+ function MovieCard({ image, rating, trailerYoutubeId }) {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
   return (
     <div className="relative w-[200px] rounded-2xl overflow-hidden bg-neutral-900 shadow-lg">
@@ -49,3 +49,5 @@ export function MovieCard({ image, rating, trailerYoutubeId }) {
     </div>
   );
 }
+
+export default memo(MovieCard);

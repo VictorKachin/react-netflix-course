@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react'
+import { memo, useEffect, useState } from 'react'
 
-export function FavoriteButton() {
+function FavoriteButton() {
 	const [isFavorite, setIsFavorite] = useState(false)
 	useEffect(() => {
 		console.log('Состояние изменилось!')
@@ -11,3 +11,4 @@ export function FavoriteButton() {
 		</button>
 	)
 }
+export default memo(FavoriteButton)

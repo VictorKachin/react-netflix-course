@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDebounce } from "./hooks/useDebounce";
 import { useTheme } from "./hooks/useTheme.js";
-import { MovieCard } from "./MovieCard";
+import MovieCard from "./MovieCard";
 import { MOVIES } from "./movies.data";
 
 function App() {
