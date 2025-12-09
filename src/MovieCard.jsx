@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 import { Modal } from "./components/ui/Modal.jsx";
 import FavoriteButton from "./FavoriteButton";
 
- function MovieCard({ image, rating, trailerYoutubeId }) {
+function MovieCard({ image, rating, trailerYoutubeId }) {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
   return (
     <div className="relative w-[200px] rounded-2xl overflow-hidden bg-neutral-900 shadow-lg">
