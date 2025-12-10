@@ -1,9 +1,13 @@
-import { memo, useState } from "react";
-import { Modal } from "./components/ui/Modal.jsx";
-import FavoriteButton from "./FavoriteButton";
+import { memo, useCallback, useState } from "react"
+import { Link } from "react-router-dom"
+import { Modal } from "./components/ui/Modal.jsx"
+import FavoriteButton from "./FavoriteButton"
 
 function MovieCard({ image, rating, trailerYoutubeId }) {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
+	const openTrailer = useCallback(() =>{
+		setIsOpenTrailer(true)
+	}, [])
   return (
     <div className="relative w-[200px] rounded-2xl overflow-hidden bg-neutral-900 shadow-lg">
       {isOpenTrailer && (
@@ -34,12 +38,13 @@ function MovieCard({ image, rating, trailerYoutubeId }) {
         <FavoriteButton />
         <button
           className="btn"
-          onClick={() => {
-            setIsOpenTrailer(true);
-          }}
+          onClick={openTrailer}
         >
-          >
+          🎬
         </button>
+        <Link to={`/movie/${trailerYoutubeId}`} className='btn'>
+        👀
+        </Link>
       </div>
 
       {/* gradient and rating */}
