@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react"
-import { useDebounce } from "./hooks/useDebounce"
-import { useTheme } from "./hooks/useTheme.js"
-import MovieCard from "./MovieCard"
-import { MOVIES } from "./movies.data"
+import { useDebounce } from "../../hooks/useDebounce.js"
+import { useTheme } from "../../hooks/useTheme.js"
+import MovieCard from "./MovieCard.jsx"
+import { MOVIES } from "./movies.data.js"
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <header className="mb-10 flex items-center justify-between">
-        <img src="/public/netflix.png" alt="Netflix" className="h-8 w-auto" />
+        <img src="/netflix.png" alt="Netflix" className="h-8 w-auto" />
 
         <div>
           <input

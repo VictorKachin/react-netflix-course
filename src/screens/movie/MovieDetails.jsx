@@ -1,6 +1,7 @@
 import { useMemo } from "react"
 import { useParams } from "react-router-dom"
-import { MOVIES } from './movies.data'
+import { MOVIES } from '../home/movies.data.js'
+import {MovieComments} from "./MovieComments.jsx";
 
 export function MovieDetails() {
 	const {id} = useParams()
@@ -23,6 +24,8 @@ export function MovieDetails() {
 				<p className='text-sm text-gray-400'>IMDb: {movie.rating}</p>
 				<p className='text-gray-300 text-sm'>Краткое описание фильма, жанр, год выхода, продолжительность и прочие данные</p>
 			</div>
+			<MovieComments/>
 		</div>
-	</div>)
+	</div>
+	)
 }

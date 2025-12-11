@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
-import App from "./App.jsx"
-import { MovieDetails } from './MovieDetails.jsx'
+import App from "./screens/home/App.jsx"
+import { MovieDetails } from './screens/movie/MovieDetails.jsx'
 import { Layout } from './components/Layout.jsx'
 
 export function MainRoutes() {

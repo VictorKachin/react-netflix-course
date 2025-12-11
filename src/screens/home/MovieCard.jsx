@@ -1,7 +1,7 @@
 import { memo, useCallback, useState } from "react"
 import { Link } from "react-router-dom"
-import { Modal } from "./components/ui/Modal.jsx"
-import FavoriteButton from "./FavoriteButton"
+import { Modal } from "../../components/ui/Modal.jsx"
+import FavoriteButton from "./FavoriteButton.jsx"
 
 function MovieCard({ image, rating, trailerYoutubeId }) {
   const [isOpenTrailer, setIsOpenTrailer] = useState(false);
