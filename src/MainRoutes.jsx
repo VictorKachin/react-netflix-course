@@ -8,14 +8,8 @@ export function MainRoutes() {
 	<Router>
 		<Routes>
 			<Route element={<Layout />}>
-				<Route 
-			path='/'
-			element={<App/>}
-			/>
-			<Route 
-			path='/movie/:id'
-			element={<MovieDetails />}
-			/>
+				<Route path='/' element={<App />} />
+				<Route path='/movie/:id' element={<MovieDetails />} />
 			</Route>
 		</Routes>
 	</Router>
