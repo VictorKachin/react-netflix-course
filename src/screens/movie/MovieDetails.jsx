@@ -1,4 +1,4 @@
-import { lazy, useMemo } from "react";
+import {lazy, Suspense, useMemo} from "react";
 import { useParams } from "react-router-dom";
 import { MOVIES } from "../home/movies.data.js";
 
@@ -31,7 +31,10 @@ export function MovieDetails() {
             прочие данные
           </p>
         </div>
-        <LazyMovieComments />
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyMovieComments />
+        </Suspense>
       </div>
     </div>
   );
